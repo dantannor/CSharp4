@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public class ShowTime : IAction
+    public class ShowDate : IAction
     {
         public void RunAction()
         {
-            string s = DateTime.Now.ToString("HH:mm:ss tt");
-            Console.WriteLine(s);
+            DateTime now = DateTime.Now;
+            string date = now.GetDateTimeFormats('d')[0];
+            Console.WriteLine(date);
             Console.ReadLine();
         }
     }

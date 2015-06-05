@@ -19,5 +19,10 @@ namespace Ex04.Menus.Interfaces
         {
           this.Show();
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}", m_SubItemName);
+        }
     }
 }

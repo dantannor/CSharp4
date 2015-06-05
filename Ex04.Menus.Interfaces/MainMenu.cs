@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
@@ -34,7 +35,10 @@ namespace Ex04.Menus.Interfaces
             {
                 if (menuItem.ToString().Equals(i_SubMenuItemName))
                 {
-                    return (menuItem as SubMenuItem);
+                    MainMenu newMenu= menuItem as SubMenuItem;
+                    if (newMenu == null) continue;
+                    newMenu.m_level++;
+                    return (newMenu);
                 }
             }
             throw new Exception("Not found");
@@ -43,17 +47,39 @@ namespace Ex04.Menus.Interfaces
 
         public void Show()
         {
-            displayCurrentMenuLevel();
-            System.Console.WriteLine("Please choose an option:");
-            string userInput = System.Console.ReadLine();
-            int userChoice;
-            while (!int.TryParse(userInput, out userChoice))
+            while (true)
             {
-                System.Console.WriteLine("Invalid input, try again:");
-                userInput = System.Console.ReadLine();
+                Console.Clear();
+                displayCurrentMenuLevel();
+                System.Console.WriteLine("Please choose an option:");
+                string userInput = System.Console.ReadLine();
+                int userChoice;
+                while (!int.TryParse(userInput, out userChoice))
+                {
+                    System.Console.WriteLine("Invalid input, try again:");
+                    userInput = System.Console.ReadLine();
+                }
+                // Exit
+                if (m_level == 1 && userChoice == 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Bye");
+                    Thread.Sleep(1500);
+                    System.Environment.Exit(0);
+                }
+                // Back to the previous menu
+                else if (userChoice == 0)
+                {
+                    break;
+                }
+                Console.Clear();
+                if (m_AllMenuItemsInCurrentLevel[userChoice - 1] is ActionItem)
+                {
+                    Console.WriteLine("Running {0}", m_AllMenuItemsInCurrentLevel[userChoice-1].ToString());
+                }
+                m_AllMenuItemsInCurrentLevel[userChoice - 1].Run();  
             }
-            Console.Clear();
-            m_AllMenuItemsInCurrentLevel[userChoice].Run();
+
         }
 
         private void displayCurrentMenuLevel()
@@ -62,6 +88,15 @@ namespace Ex04.Menus.Interfaces
             foreach (IMenuItem menuItem in m_AllMenuItemsInCurrentLevel)
             {
                 System.Console.WriteLine(string.Format("{0}. {1}", itemNumber, m_AllMenuItemsInCurrentLevel[itemNumber++-1].ToString()));
+                
+            }
+            if (m_level == 1)
+            {
+                Console.WriteLine("0. Exit");
+            }
+            else
+            {
+                Console.WriteLine("0. back");
             }
         }
     }

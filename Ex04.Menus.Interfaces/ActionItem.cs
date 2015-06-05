@@ -21,10 +21,17 @@ namespace Ex04.Menus.Interfaces
         {
             m_Action.RunAction();
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}", m_ActionItemName);
+        }
+
     }
 
     public interface IAction
     {
         void RunAction();
     }
+
 }

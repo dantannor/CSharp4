@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public class ShowTime : IAction
+    public class ShowVersion : IAction
     {
         public void RunAction()
         {
-            string s = DateTime.Now.ToString("HH:mm:ss tt");
-            Console.WriteLine(s);
+            Console.WriteLine("Version: 15.2.4.0");
             Console.ReadLine();
         }
     }

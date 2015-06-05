@@ -1,0 +1,10 @@
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe.config
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csprojResolveAssemblyReference.cache
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb

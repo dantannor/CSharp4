@@ -1,0 +1,5 @@
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.dll.config
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
+C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb
