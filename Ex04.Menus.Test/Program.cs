@@ -29,7 +29,7 @@ namespace Ex04.Menus.Test
             menu.GetSubMenuItem("Show Date/Time").AddActionItem("Show Time", ShowTimeAction);
             menu.GetSubMenuItem("Show Date/Time").AddActionItem("Show Date", ShowDate);
 
-            menu.GetSubMenuItem("Info").AddActionItem("Show Version",ShowVersion );
+            menu.GetSubMenuItem("Info").AddActionItem("Show Version", ShowVersion );
             menu.GetSubMenuItem("Info").AddActionItem("Count Words", CountWords);
             menu.Show();
         }

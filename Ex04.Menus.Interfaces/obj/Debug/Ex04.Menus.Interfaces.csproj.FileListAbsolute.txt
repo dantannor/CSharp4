@@ -1,7 +1,12 @@
-c:\users\daniel\documents\visual studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.exe.config
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll.config
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
 C:\Users\S551LB\Documents\CSharp4\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll.config
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
