@@ -3,7 +3,6 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Test
 {
     using Ex04.Menus.Interfaces;
@@ -12,12 +11,11 @@ namespace Ex04.Menus.Test
     {
         public static void Main(string[] args)
         {
-        
-            //interfaceTest();
-            delegateTest();
+            interfaceTest();
 
+            delegateTest();
         }
-        
+
         private static void interfaceTest()
         {
             IAction ShowTimeAction = new ShowTime();

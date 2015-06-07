@@ -3,11 +3,8 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Interfaces
 {
-    using System;
-
     public class ActionItem : IMenuItem
     {
         private readonly IAction m_Action;
@@ -22,15 +19,12 @@ namespace Ex04.Menus.Interfaces
         public void Run()
         {
             m_Action.RunAction();
-            Console.Clear();
         }
-
 
         public override string ToString()
         {
             return string.Format("{0}", m_ActionItemName);
         }
-
     }
 
     public interface IAction

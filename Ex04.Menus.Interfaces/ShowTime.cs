@@ -3,7 +3,6 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Interfaces
 {
     using System;
@@ -12,8 +11,8 @@ namespace Ex04.Menus.Interfaces
     {
         public void RunAction()
         {
-            string s = DateTime.Now.ToString("HH:mm:ss tt");
-            Console.WriteLine(s);
+            string time = DateTime.Now.ToString("HH:mm:ss tt");
+            Console.WriteLine(time);
             Console.ReadLine();
         }
     }

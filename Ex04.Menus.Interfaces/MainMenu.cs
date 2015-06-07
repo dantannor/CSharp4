@@ -3,7 +3,6 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Interfaces
 {
     using System;
@@ -13,7 +12,6 @@ namespace Ex04.Menus.Interfaces
 
     public class MainMenu
     {
-        
         private readonly List<IMenuItem> m_CurMenuItems;
         private int m_Level = 1;
 
@@ -84,7 +82,7 @@ namespace Ex04.Menus.Interfaces
             throw new Exception(string.Format("{0} item doesn't exist", i_MenuItemName));
         }
 
-        public bool itemExists(string i_MenuItemName)
+        private bool itemExists(string i_MenuItemName)
         {
             bool exists = false;
 
@@ -141,7 +139,10 @@ namespace Ex04.Menus.Interfaces
                 Console.Clear();
                 if (this.m_CurMenuItems[userChoice - 1] is ActionItem)
                 {
-                    Console.WriteLine("Running {0}", this.m_CurMenuItems[userChoice - 1].ToString());
+                    Console.WriteLine(
+@"Running {0}
+", 
+ this.m_CurMenuItems[userChoice - 1].ToString());
                 }
 
                 this.m_CurMenuItems[userChoice - 1].Run();  
@@ -153,39 +154,42 @@ namespace Ex04.Menus.Interfaces
         /// </summary>
         private void displayCurrentMenuLevel()
         {
+            int itemNumber = 1;
+
             Console.Clear();
-            Console.WriteLine(
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(
 string.Format(
 @"{0}
 ===========
-",
+
+", 
 this.ToString()));
-            int itemNumber = 1;
-            StringBuilder stringBuilder = new StringBuilder();
-
-            if (m_Level == 1)
-            {
-                stringBuilder.Append(
-@"Main Menu
-============
-
-");
-            }
-            
 
             foreach (IMenuItem menuItem in this.m_CurMenuItems)
             {
                 stringBuilder.Append(
                     string.Format(
 @"{0}. {1}
-",
- itemNumber,
+", 
+ itemNumber, 
  this.m_CurMenuItems[itemNumber++ - 1].ToString()));
             }
 
             // Exit or back button
-            stringBuilder.Append(this.m_Level == 1 ? "0. Exit" : "0. Back");
+            stringBuilder.Append(this.m_Level == 1 ?
+@"
+0. Exit
+" :
+@"
+0. Back
+");
             Console.WriteLine(stringBuilder);
+        }
+
+        public override string ToString()
+        {
+            return "Main Menu";
         }
     }
 }

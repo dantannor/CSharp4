@@ -3,7 +3,6 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Delegates
 {
     public delegate void DelegateMenu(string iMenuItemName);

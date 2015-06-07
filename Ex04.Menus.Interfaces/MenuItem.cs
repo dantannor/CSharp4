@@ -3,19 +3,15 @@
 //   
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Ex04.Menus.Interfaces
 {
-    using System;
-    using System.Text;
-
     public class MenuItem : MainMenu, IMenuItem
     {
         private readonly string m_MenuItemName;
 
-        public MenuItem(string iMenuItemName)
+        public MenuItem(string i_MenuItemName)
         {
-            this.m_MenuItemName = iMenuItemName;
+            this.m_MenuItemName = i_MenuItemName;
         }
 
         /// <summary>
