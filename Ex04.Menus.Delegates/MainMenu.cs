@@ -23,6 +23,19 @@ namespace Ex04.Menus.Delegates
             this.m_CurMenuItems = new List<IMenuItem>();
         }
 
+        public delegate void showHandler();
+
+        public static event showHandler _ShowEvent;
+
+        protected virtual void OnShower()
+        {
+            showHandler handler = _ShowEvent;
+            if (handler != null)
+            {
+                handler.Invoke();
+            }
+        }
+
         /// <summary>
         /// Add an action item 
         /// </summary>
@@ -38,13 +51,13 @@ namespace Ex04.Menus.Delegates
         /// Add sub item
         /// </summary>
         /// <param name="i_SubItemName">Name of subitem</param>
-        public void AddSubItem(string i_SubItemName)
+        public void AddMenuItem(string i_SubItemName)
         {
             MenuItem item = new MenuItem(i_SubItemName);
             this.m_CurMenuItems.Add(item);
         }
 
-        public MainMenu GetSubMenuItem(string i_SubMenuItemName)
+        public MainMenu GetMenuItem(string i_SubMenuItemName)
         {
             foreach (IMenuItem menuItem in this.m_CurMenuItems)
             {

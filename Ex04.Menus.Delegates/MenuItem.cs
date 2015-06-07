@@ -10,26 +10,17 @@ namespace Ex04.Menus.Delegates
 
     public class MenuItem : MainMenu, IMenuItem
     {
-        public event DelegateMenu m_OpenMenuNotifier;
-
         private readonly string m_MenuItemName;
 
-        public MenuItem(string iMenuItemName)
+        public MenuItem(string i_SubItemName)
         {
-            this.m_MenuItemName = iMenuItemName;
+            m_MenuItemName = i_SubItemName;
+            _ShowEvent += this.Show;
         }
 
-        /// <summary>
-        /// Shows the menu item
-        /// </summary>
         public void Run()
         {
-          this.Show();
-        }
-
-        public void OnOpenMenu()
-        {
-            m_OpenMenuNotifier.Invoke(m_MenuItemName);
+            OnShower();
         }
 
         public override string ToString()

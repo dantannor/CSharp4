@@ -28,12 +28,5 @@ namespace Ex04.Menus.Delegates
         {
             return string.Format("{0}", m_ActionItemName);
         }
-
     }
-
-    public interface IAction
-    {
-        void RunAction();
-    }
-
 }

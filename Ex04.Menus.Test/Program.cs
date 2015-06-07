@@ -13,7 +13,7 @@ namespace Ex04.Menus.Test
         public static void Main(string[] args)
         {
         
-            interfaceTest();
+            //interfaceTest();
             delegateTest();
 
         }
@@ -38,19 +38,21 @@ namespace Ex04.Menus.Test
 
         private static void delegateTest()
         {
-            IAction ShowTimeAction = new ShowTime();
-            IAction ShowDate = new ShowDate();
-            IAction ShowVersion = new ShowVersion();
-            IAction CountWords = new CountWords();
-            MainMenu menu = new MainMenu();
+            ShowTime ShowTime = new ShowTime();
+            ShowDate ShowDate = new ShowDate();
+            ShowVersion ShowVersion = new ShowVersion();
+            CountWords CountWords = new CountWords();
+
+            Delegates.MainMenu menu = new Delegates.MainMenu();
+
             menu.AddMenuItem("Show Date/Time");
             menu.AddMenuItem("Info");
 
-            menu.GetMenuItem("Show Date/Time").AddActionItem("Show Time", ShowTimeAction);
-            menu.GetMenuItem("Show Date/Time").AddActionItem("Show Date", ShowDate);
+            menu.GetMenuItem("Show Date/Time").AddActionItem("Show Time", ShowTime.RunAction);
+            menu.GetMenuItem("Show Date/Time").AddActionItem("Show Date", ShowDate.RunAction);
 
-            menu.GetMenuItem("Info").AddActionItem("Show Version", ShowVersion);
-            menu.GetMenuItem("Info").AddActionItem("Count Words", CountWords);
+            menu.GetMenuItem("Info").AddActionItem("Show Version", ShowVersion.RunAction);
+            menu.GetMenuItem("Info").AddActionItem("Count Words", CountWords.RunAction);
             menu.Show();
         }
          

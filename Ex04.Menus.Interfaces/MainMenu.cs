@@ -107,7 +107,6 @@ namespace Ex04.Menus.Interfaces
         {
             while (true)
             {
-                Console.Clear();
                 displayCurrentMenuLevel();
                 Console.WriteLine("Please choose an option:");
                 string userInput = Console.ReadKey().KeyChar.ToString();
@@ -154,6 +153,13 @@ namespace Ex04.Menus.Interfaces
         /// </summary>
         private void displayCurrentMenuLevel()
         {
+            Console.Clear();
+            Console.WriteLine(
+string.Format(
+@"{0}
+===========
+",
+this.ToString()));
             int itemNumber = 1;
             StringBuilder stringBuilder = new StringBuilder();
 
