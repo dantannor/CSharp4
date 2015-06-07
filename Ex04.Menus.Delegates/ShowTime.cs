@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ShowTime.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
+    using System;
+
     public class ShowTime : IAction
     {
         public void RunAction()

@@ -8,3 +8,4 @@ C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Da
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.pdb
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\B15 Ex04 Haim 304852122 Daniel 314389214\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.csprojResolveAssemblyReference.cache

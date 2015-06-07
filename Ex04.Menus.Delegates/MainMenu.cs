@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MainMenu.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading;
+
     public class MainMenu
     {
-        private int m_Level = 1;
         private readonly List<IMenuItem> m_CurMenuItems;
+        private int m_Level = 1;
 
         /*
          * Constructor
@@ -25,10 +28,10 @@ namespace Ex04.Menus.Interfaces
         /// </summary>
         /// <param name="i_ActionItemName">Action Name</param>
         /// <param name="i_Action">Action</param>
-        public void AddActionItem(string i_ActionItemName, IAction i_Action)
+        public void AddActionItem(string i_ActionItemName, Action i_Action)
         {
-            ActionItem actionItem = new ActionItem(i_ActionItemName, i_Action);
-            this.m_CurMenuItems.Add(actionItem);
+            Action actionItem = i_Action;
+            this.m_CurMenuItems.Add(new ActionItem(i_ActionItemName, i_Action));
         }
 
         /// <summary>
@@ -47,14 +50,19 @@ namespace Ex04.Menus.Interfaces
             {
                 if (menuItem.ToString().Equals(i_SubMenuItemName))
                 {
-                    MainMenu newMenu= menuItem as MenuItem;
-                    if (newMenu == null) continue;
+                    MainMenu newMenu = menuItem as MenuItem;
+
+                    if (newMenu == null)
+                    {
+                        continue;
+                    }
+
                     newMenu.m_Level++;
-                    return (newMenu);
+                    return newMenu;
                 }
             }
-            throw new Exception("Not found");
 
+            throw new Exception("Not found");
         }
 
         /// <summary>
@@ -66,19 +74,19 @@ namespace Ex04.Menus.Interfaces
             {
                 Console.Clear();
                 displayCurrentMenuLevel();
-                System.Console.WriteLine("Please choose an option:");
+                Console.WriteLine("Please choose an option:");
                 string userInput = Console.ReadKey().KeyChar.ToString();
                 int userChoice;
 
                 while (!int.TryParse(userInput, out userChoice) || userChoice > m_CurMenuItems.Count)
                 {
                     Console.WriteLine();
-                    System.Console.WriteLine("Invalid input, try again");
+                    Console.WriteLine("Invalid input, try again");
                     Thread.Sleep(1000);
                     Console.Clear();
 
                     displayCurrentMenuLevel();
-                    System.Console.WriteLine("Please choose an option:");
+                    Console.WriteLine("Please choose an option:");
                     userInput = Console.ReadKey().KeyChar.ToString();
                 }
 
@@ -88,7 +96,7 @@ namespace Ex04.Menus.Interfaces
                     Console.Clear();
                     Console.WriteLine("Bye");
                     Thread.Sleep(1500);
-                    System.Environment.Exit(0);
+                    Environment.Exit(0);
                 }
                 else if (userChoice == 0)
                 {
@@ -101,8 +109,6 @@ namespace Ex04.Menus.Interfaces
                 {
                     Console.WriteLine("Running {0}", this.m_CurMenuItems[userChoice - 1].ToString());
                 }
-
-                this.m_CurMenuItems[userChoice - 1].Run();  
             }
         }
 
@@ -114,7 +120,7 @@ namespace Ex04.Menus.Interfaces
             int itemNumber = 1;
             foreach (IMenuItem menuItem in this.m_CurMenuItems)
             {
-                System.Console.WriteLine(
+                Console.WriteLine(
                     string.Format("{0}. {1}", itemNumber, this.m_CurMenuItems[itemNumber++ - 1].ToString()));
             }
 

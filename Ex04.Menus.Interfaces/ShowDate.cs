@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ShowDate.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Ex04.Menus.Interfaces
 {
+    using System;
+
     public class ShowDate : IAction
     {
         public void RunAction()

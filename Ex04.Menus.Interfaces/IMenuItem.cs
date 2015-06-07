@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IMenuItem.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Ex04.Menus.Interfaces
 {
-    interface IMenuItem
+    public interface IMenuItem
     {
         void Run();
     }

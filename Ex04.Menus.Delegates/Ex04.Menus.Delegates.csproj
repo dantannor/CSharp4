@@ -38,6 +38,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionItem.cs" />
+    <Compile Include="CountWords.cs" />
+    <Compile Include="IMenuItem.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="ShowDate.cs" />
+    <Compile Include="ShowTime.cs" />
+    <Compile Include="ShowVersion.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="CountWords.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
+    using System;
+
     public class CountWords : IAction
     {
         public void RunAction()

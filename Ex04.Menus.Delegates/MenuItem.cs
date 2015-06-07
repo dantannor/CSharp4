@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MenuItem.cs" company="">
+//   
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace Ex04.Menus.Interfaces
+namespace Ex04.Menus.Delegates
 {
+    public delegate void DelegateMenu(string iMenuItemName);
+
     public class MenuItem : MainMenu, IMenuItem
     {
+        public event DelegateMenu m_OpenMenuNotifier;
+
         private readonly string m_MenuItemName;
 
         public MenuItem(string iMenuItemName)
@@ -21,6 +25,11 @@ namespace Ex04.Menus.Interfaces
         public void Run()
         {
           this.Show();
+        }
+
+        public void OnOpenMenu()
+        {
+            m_OpenMenuNotifier.Invoke(m_MenuItemName);
         }
 
         public override string ToString()
